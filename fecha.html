@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="date" id="fecha">  
+  <div>
+      <button onclick="">Compara fechas</button>
+  </div>
+</body>
+<script>
+    function comparar() {
+     var fecha_input = document.getElementById('fecha').value;
+     console.log(fecha_input)
+     var f = new date();
+     var mes= (f.getMonth()+1).toString();
+     if (mes.length <= 1) {
+         mes = "0" + mes;
+     }   
+     console.log(mes)
+     var dia = f.getDate().toString();
+     if (dia.length <= 1) {
+        dia = "0" + dia;
+     }
+     console.log(dia)
+    }
+</script>
+</html>
